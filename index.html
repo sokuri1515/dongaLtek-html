@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>디스플레이 산업 & 동아엘텍·선익시스템 투자 분석 리포트 v3</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','Noto Sans KR',sans-serif;color:#111827;line-height:1.75;max-width:960px;margin:0 auto;padding:2.5rem 1.5rem;background:#fff;font-size:15px}
+h1{font-size:1.75rem;font-weight:700;color:#1e3a5f;border-bottom:3px solid #1e3a5f;padding-bottom:.6rem;margin-bottom:1.5rem}
+h2{font-size:1.25rem;font-weight:700;color:#1e40af;margin:2.5rem 0 .75rem;padding-left:.75rem;border-left:4px solid #1e40af}
+h3{font-size:1.05rem;font-weight:600;color:#374151;margin:1.5rem 0 .5rem}
+p{margin-bottom:.85rem}
+ul,ol{margin:.5rem 0 .85rem 1.5rem}
+li{margin-bottom:.3rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0 1.5rem;font-size:.9rem}
+th{background:#1e3a5f;color:#fff;padding:.55rem .75rem;text-align:left;font-weight:600}
+td{padding:.5rem .75rem;border-bottom:1px solid #e5e7eb;vertical-align:top}
+tr:nth-child(even) td{background:#f9fafb}
+.meta{color:#6b7280;font-size:.85rem;margin-bottom:2rem;padding:.75rem 1rem;background:#f3f4f6;border-radius:6px}
+.exec-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:.75rem;margin:1rem 0 1.5rem}
+.exec-card{background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;padding:.85rem 1rem}
+.exec-card .label{font-size:.75rem;color:#3b82f6;font-weight:600;margin-bottom:.2rem;text-transform:uppercase;letter-spacing:.03em}
+.exec-card .value{font-size:1.4rem;font-weight:700;color:#1e3a5f}
+.exec-card .sub{font-size:.75rem;color:#6b7280;margin-top:.2rem}
+.callout{background:#fef9c3;border-left:4px solid #f59e0b;padding:.85rem 1.1rem;border-radius:0 6px 6px 0;margin:1rem 0}
+.callout.red{background:#fef2f2;border-color:#ef4444}
+.callout.green{background:#f0fdf4;border-color:#22c55e}
+.callout.blue{background:#eff6ff;border-color:#3b82f6}
+.callout strong{display:block;margin-bottom:.25rem;font-size:.9rem}
+.timeline{border-left:3px solid #1e40af;margin:1rem 0;padding-left:1.25rem}
+.timeline-item{position:relative;margin-bottom:.85rem;padding:.6rem .85rem;background:#f9fafb;border-radius:6px;font-size:.9rem}
+.timeline-item::before{content:'';position:absolute;left:-1.5rem;top:.85rem;width:10px;height:10px;border-radius:50%;background:#1e40af;border:2px solid #fff;box-shadow:0 0 0 2px #1e40af}
+.timeline-date{font-weight:700;color:#1e40af;margin-right:.5rem}
+.chart-wrap{position:relative;width:100%;height:400px;margin:1rem 0}
+.chart-wrap2{position:relative;width:100%;height:280px;margin:1rem 0}
+.legend-row{display:flex;flex-wrap:wrap;gap:.5rem;margin:.5rem 0 1rem;font-size:.82rem}
+.leg-group{display:flex;align-items:center;gap:.5rem;padding:.3rem .7rem;background:#f3f4f6;border-radius:5px}
+.leg-label{color:#6b7280;font-weight:600;font-size:.75rem}
+.leg-item{display:flex;align-items:center;gap:.3rem}
+.swatch{width:11px;height:11px;border-radius:2px;display:inline-block}
+.tax-compare{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:1rem 0}
+.tax-card{border-radius:8px;padding:1rem 1.1rem;border:1.5px solid #e5e7eb}
+.tax-card.best{border-color:#22c55e;background:#f0fdf4}
+.tax-card.mid{border-color:#f59e0b;background:#fffbeb}
+.tax-card.worst{border-color:#ef4444;background:#fef2f2}
+.tax-card .method{font-weight:700;font-size:.95rem;margin-bottom:.4rem}
+.tax-card .amount{font-size:1.6rem;font-weight:800;margin:.3rem 0}
+.tax-card .note{font-size:.78rem;color:#6b7280}
+.monitor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.75rem;margin:1rem 0}
+.monitor-card{border-radius:7px;padding:.8rem 1rem;border:1px solid #e5e7eb;font-size:.88rem}
+.monitor-card .priority{font-size:.7rem;font-weight:700;border-radius:3px;padding:.15rem .45rem;display:inline-block;margin-bottom:.4rem}
+.monitor-card .priority.a{background:#fee2e2;color:#b91c1c}
+.monitor-card .priority.b{background:#fef3c7;color:#92400e}
+.monitor-card .priority.c{background:#e0e7ff;color:#3730a3}
+.toc{background:#f9fafb;border:1px solid #e5e7eb;border-radius:8px;padding:1.1rem 1.5rem;margin:1.5rem 0}
+.toc h3{margin-top:0;margin-bottom:.6rem;color:#374151}
+.toc ol{margin-bottom:0}
+.toc li{font-size:.88rem;margin-bottom:.2rem;color:#3b82f6}
+.new-badge{background:#10b981;color:#fff;font-size:.65rem;font-weight:700;border-radius:3px;padding:.1rem .35rem;margin-left:.35rem;vertical-align:middle}
+.update-badge{background:#f59e0b;color:#fff;font-size:.65rem;font-weight:700;border-radius:3px;padding:.1rem .35rem;margin-left:.35rem;vertical-align:middle}
+.disclaimer{background:#f3f4f6;border-radius:8px;padding:1rem 1.25rem;font-size:.8rem;color:#6b7280;margin-top:3rem;line-height:1.6}
+code{background:#f3f4f6;padding:.1rem .4rem;border-radius:3px;font-family:'SFMono-Regular',Consolas,monospace;font-size:.85em}
+pre{background:#f3f4f6;padding:1rem 1.25rem;border-radius:8px;overflow-x:auto;font-size:.85rem;margin:1rem 0;line-height:1.5}
+.divider{border:none;border-top:1px solid #e5e7eb;margin:2rem 0}
+@media(max-width:640px){.exec-grid,.tax-compare,.monitor-grid{grid-template-columns:1fr}.legend-row{flex-direction:column}}
+</style>
+</head>
+<body>
+
+<h1>디스플레이 산업 턴어라운드 &amp; 동아엘텍·선익시스템 투자 분석 리포트</h1>
+
+<div class="meta">
+  <strong>v3 — 2026년 5월 1일</strong> &nbsp;|&nbsp;
+  대상 종목: 동아엘텍(088130) · 선익시스템(171090) &nbsp;|&nbsp;
+  분석 범위: 산업 사이클 / Capex 트렌드 / 기업 가치 / 지배구조 / 세금 시나리오
+</div>
+
+<div class="toc">
+  <h3>목차</h3>
+  <ol>
+    <li>Executive Summary</li>
+    <li>디스플레이 산업 턴어라운드 — Capex 사이클이 본질</li>
+    <li>패널 업체별 투자 동향 + Capex 차트</li>
+    <li>최종 고객사(Set Maker) 투자 흐름</li>
+    <li>한국 디스플레이 장비 업체 함의</li>
+    <li>동아엘텍 vs 선익시스템 — 밸류에이션 비교</li>
+    <li>디스카운트 해소 트리거 점검</li>
+    <li>2026년 경영승계 심층 분석 <span class="update-badge">UPDATED</span></li>
+    <li>배당소득 분리과세와 주주환원 유인 <span class="new-badge">NEW</span></li>
+    <li>지분 이전 방법별 세금 비교 <span class="new-badge">NEW</span></li>
+    <li>우량기업부 전환 — 가업상속공제 시한 <span class="new-badge">NEW</span></li>
+    <li>종합 판단 &amp; 모니터링 포인트</li>
+    <li>리스크 요인</li>
+  </ol>
+</div>
+
+<!-- ======================== 1. EXECUTIVE SUMMARY ======================== -->
+<h2>1. Executive Summary</h2>
+
+<div class="exec-grid">
+  <div class="exec-card"><div class="label">2026 OLED Capex</div><div class="value">+68%</div><div class="sub">전년 대비 YoY · 사이클 정점</div></div>
+  <div class="exec-card"><div class="label">지주사 디스카운트</div><div class="value">66%</div><div class="sub">동아엘텍 vs 선익 지분 가치</div></div>
+  <div class="exec-card" style="grid-column:span 2;background:#fef2f2;border:1px solid #fecaca"><div class="label" style="color:#dc2626">PBR·PSR 배수 차이</div><div class="value" style="color:#dc2626">10배</div><div class="sub">분기 매출·영익은 수렴했는데, 선익 PBR 3.6x vs 동아 0.35x</div></div>
+  <div class="exec-card"><div class="label">오너 일가 합산 지분</div><div class="value">37.7%</div><div class="sub">무상증자 확인 후 확정치</div></div>
+  <div class="exec-card"><div class="label">가업상속공제 창</div><div class="value">2~3년</div><div class="sub">우량기업부 전환으로 단축</div></div>
+</div>
+
+<p><strong>7가지 핵심 결론:</strong></p>
+<ol>
+  <li><strong>산업 턴어라운드는 진행 중</strong>이며 동력은 IT·가전 소비 회복이 아닌 8.6/8.7세대 IT OLED Capex 사이클과 폴더블·차량·XR 신응용처입니다. 2026년 OLED 설비투자 +68% YoY, 전체 Capex의 84%를 차지합니다.</li>
+  <li><strong>동아엘텍은 자기 시총(약 1,928억)의 3배에 달하는 선익시스템 지분(약 5,684억)을 보유</strong>해 약 66% 지주사 디스카운트 상태입니다.</li>
+  <li><strong>디스카운트 해소 트리거는 여전히 약합니다.</strong> 결산배당 26억원(배당성향 2.7%)이 전부이며 자사주 매입·소각·인적분할 같은 적극적 신호는 미확인입니다.</li>
+  <li><strong>2026년 3월 경영승계 완료.</strong> 1:1 무상증자 이전 자사주 소각이라는 정교한 시퀀스를 통해 오너 일가 지분율을 무상으로 강화하고, 이후 박진균(장남)에게 대표이사직을 이양했습니다.</li>
+  <li><strong>지분 구조 공시로 확정:</strong> 박진균 11.44%, 박진철(차남) 11.44%(무상증자로 동등 확인), 박재규 ~14.83%. 오너 일가 합계 약 37.74%로 강력한 지배 구조.</li>
+  <li><strong>배당소득 분리과세(2026~2028) 시행으로 박진균의 배당 확대 유인이 급격히 강화됩니다.</strong> 배당성향 25% 달성 시 오너 일가 연간 세금 절감 수십억원 규모.</li>
+  <li><strong>2026년 5월 우량기업부 전환으로 가업상속공제 활용 창이 좁아지고 있습니다.</strong> 직전 3년 평균 매출이 5,000억원 임계치를 돌파하기 전에 상속이 발생해야 세금이 거의 0이 되는 시나리오가 가능합니다.</li>
+</ol>
+
+<hr class="divider">
+
+<!-- ======================== 2. 산업 턴어라운드 ======================== -->
+<h2>2. 디스플레이 산업 턴어라운드 — Capex 사이클이 본질</h2>
+
+<p>카운터포인트리서치(2026년 1Q 보고서)에 따르면 2026년 전체 디스플레이 설비투자는 전년 대비 32% 증가합니다. LCD는 45% 역성장하지만, OLED는 68% 성장해 전체 투자의 84%를 차지합니다. 2023년부터 2030년까지 누적 기준으로 OLED 비중은 67%에 달할 전망입니다.</p>
+
+<div class="callout blue">
+  <strong>소비단은 아직 약합니다</strong>
+  폴더블폰 출하량 -14.4%(2025년), 태블릿 OLED 판매 기대 이하 — 그러나 패널사들은 2027~2030년 수요를 보고 지금 라인을 짓고 있습니다. IT OLED 침투, 폴더블 확산, 차량용·XR 신시장이라는 4대 트리거가 Capex를 끌어올리는 본질적 동력입니다.
+</div>
+
+<hr class="divider">
+
+<!-- ======================== 3. CAPEX 차트 ======================== -->
+<h2>3. 패널 업체별 투자 동향 &amp; Capex 차트</h2>
+
+<h3>8.6세대 IT OLED Capex 맵</h3>
+<table>
+  <thead><tr><th>패널사</th><th>라인</th><th>투자규모</th><th>투입용량</th><th>양산 시점</th><th>증착방식</th></tr></thead>
+  <tbody>
+    <tr><td><strong>삼성디스플레이</strong></td><td>A6 (아산)</td><td>4.1조원</td><td>15K</td><td>2026년 2Q</td><td>FMM (캐논토키)</td></tr>
+    <tr><td><strong>BOE</strong></td><td>B16 (청두)</td><td>11.4조원</td><td>32K (2단계)</td><td>2026년 3Q~</td><td>FMM (<strong>선익시스템</strong>)</td></tr>
+    <tr><td><strong>Visionox</strong></td><td>V5 (허페이)</td><td>10.8조원</td><td>32K</td><td>2026년 4Q~</td><td>FMM + ViP</td></tr>
+    <tr><td><strong>CSOT</strong></td><td>T8 (광저우)</td><td>5.6조원</td><td>32K (2단계)</td><td>2027년~</td><td>RGB 잉크젯</td></tr>
+    <tr><td><strong>Tianma</strong></td><td>미정</td><td>검토 중</td><td>—</td><td>2027년~?</td><td>—</td></tr>
+    <tr><td><strong>LG디스플레이</strong></td><td>(보류)</td><td>2026년 Capex 2조원대</td><td>6세대 활용</td><td>—</td><td>포토패턴드</td></tr>
+  </tbody>
+</table>
+
+<h3>연간 OLED 설비투자 추이 (2023–2027E)</h3>
+<div class="legend-row">
+  <div class="leg-group">
+    <span class="leg-label">한국</span>
+    <span class="leg-item"><span class="swatch" style="background:#185FA5"></span>삼성D</span>
+    <span class="leg-item"><span class="swatch" style="background:#0F6E56"></span>LGD</span>
+  </div>
+  <div class="leg-group">
+    <span class="leg-label">중국</span>
+    <span class="leg-item"><span class="swatch" style="background:#D85A30"></span>BOE</span>
+    <span class="leg-item"><span class="swatch" style="background:#BA7517"></span>Visionox</span>
+    <span class="leg-item"><span class="swatch" style="background:#D4537E"></span>CSOT</span>
+    <span class="leg-item"><span class="swatch" style="background:#7F77DD"></span>Tianma</span>
+  </div>
+</div>
+<div class="chart-wrap">
+  <canvas id="capexChart" role="img" aria-label="6개 패널 업체 연간 OLED 설비투자 2023-2027 (조원)"></canvas>
+</div>
+
+<h3>주요 8.6G 프로젝트 누적 약정 Capex</h3>
+<div class="chart-wrap2">
+  <canvas id="projChart" role="img" aria-label="주요 8.6G IT OLED 프로젝트별 누적 투자 약정 (조원)"></canvas>
+</div>
+
+<p style="font-size:.8rem;color:#6b7280;margin-top:.25rem">※ 회사별 연간 capex는 발표된 프로젝트 규모, 카운터포인트·유비리서치·DSCC 자료 기반 추정치. 2026~2027년은 전망치(E). LGD는 8.6G 보류, Tianma는 2027년 결정 가능성.</p>
+
+<div class="callout">
+  <strong>핵심 스토리: 한·중 점유율 역전 가속</strong>
+  2023년 한국(삼성D+LGD)이 Capex의 65%를 차지했으나, 2026년에는 20%로 감소. 중국 BOE+Visionox 두 업체만으로 산업 총 Capex의 65%(약 9조원)를 차지. 이 두 라인의 증착기 핵심 공급사가 선익시스템.
+</div>
+
+<hr class="divider">
+
+<!-- ======================== 4. SET MAKER ======================== -->
+<h2>4. 최종 고객사(Set Maker) 투자 흐름</h2>
+
+<h3>Apple — OLED 전환 로드맵 (디스플레이 사이클 최대 트리거)</h3>
+<table>
+  <thead><tr><th>제품</th><th>OLED 전환 시점</th><th>공급사</th></tr></thead>
+  <tbody>
+    <tr><td>아이패드 미니</td><td>2026년</td><td>삼성디스플레이 단독</td></tr>
+    <tr><td>맥북 프로 (14/16")</td><td>2026년 말 ~ 2027년 초</td><td>삼성디스플레이 단독 (A6 라인)</td></tr>
+    <tr><td>폴더블 아이폰</td><td>2026년 가을 추정</td><td>삼성디스플레이 단독 (A3 라인)</td></tr>
+    <tr><td>아이패드 에어</td><td>2027년 상반기</td><td>삼성디스플레이</td></tr>
+    <tr><td>아이맥 / 맥북 에어</td><td>2027~2028년</td><td>미정</td></tr>
+    <tr><td>AI 스마트글래스</td><td>2026~2027년</td><td>OLEDoS (마이크로 OLED)</td></tr>
+  </tbody>
+</table>
+
+<h3>기타 주요 고객사</h3>
+<ul>
+  <li><strong>Meta</strong>: 2025년 상반기 스마트글래스 시장 73% 점유, 디스플레이형 '하이퍼노바' 공개 → OLEDoS 수요 창출</li>
+  <li><strong>Google</strong>: 2026년 AI 스마트글래스 출시, Gemini 탑재, 워비파커 1.5억달러 협력</li>
+  <li><strong>삼성전자</strong>: 갤럭시 XR 출시(OLEDoS), AI 글래스 '프로젝트 무한', 폴더블 Galaxy Z 시리즈</li>
+  <li><strong>화웨이</strong>: 2025년 1분기 글로벌 폴더블 1위(35%), BOE 핵심 파트너로 수직 계열화</li>
+  <li><strong>차량용</strong>: 삼성D 점유율 70%, 2025년 약 450만대 → 2030년 1,300만대 예상</li>
+</ul>
+
+<hr class="divider">
+
+<!-- ======================== 5. 한국 장비 업체 ======================== -->
+<h2>5. 한국 디스플레이 장비 업체 함의</h2>
+
+<table>
+  <thead><tr><th>기업</th><th>핵심 역할</th><th>주요 수주 내역</th></tr></thead>
+  <tbody>
+    <tr><td><strong>선익시스템</strong></td><td>OLED 증착기 / OLEDoS</td><td>BOE 8.6G 증착기 4,000억대(Phase 1+2), Jinan Goerpixel 410억, Anhui Hongxi 206억, SeeYa 추가</td></tr>
+    <tr><td><strong>동아엘텍</strong></td><td>OLED 후공정 검사장비 + 선익시스템 53% 지주</td><td>삼성D·LGD·BOE·Visionox 검사장비 공급. 2025년 영업이익 1,134억(+669%)</td></tr>
+    <tr><td><strong>아바코</strong></td><td>증착 물류시스템</td><td>BOE 8.6G 물류장비 2,000억원대, Phase 2 LOI 수령</td></tr>
+    <tr><td><strong>AP시스템</strong></td><td>ELA 장비</td><td>Visionox V5 ELA 단독 공급</td></tr>
+    <tr><td><strong>ELP</strong></td><td>검사장비</td><td>삼성D·BOE·Visionox·CSOT 4개 8.6G 라인 모두 수주</td></tr>
+  </tbody>
+</table>
+
+<hr class="divider">
+
+<!-- ======================== 6. 밸류에이션 ======================== -->
+<h2>6. 동아엘텍 vs 선익시스템 — 밸류에이션 비교</h2>
+
+<table>
+  <thead><tr><th>항목</th><th>선익시스템 (171090)</th><th>동아엘텍 (088130)</th></tr></thead>
+  <tbody>
+    <tr><td>주가 (2026.4 말)</td><td>약 106,000원</td><td>약 11,030원</td></tr>
+    <tr><td>시가총액</td><td><strong>약 1조 709억원</strong></td><td><strong>약 1,928억원</strong></td></tr>
+    <tr><td>PER</td><td>11.4배 (EPS 9,270원)</td><td>4.0배 (EPS 2,811원)</td></tr>
+    <tr><td>52주 범위</td><td>33,200~144,000원</td><td>2,865~14,620원</td></tr>
+    <tr><td>외국인 소진율</td><td>8.03%</td><td>3.18%</td></tr>
+    <tr><td>사업 본질</td><td>OLED 증착기 직접 영위</td><td>검사장비 + 선익 53% 지분 + VC</td></tr>
+  </tbody>
+</table>
+
+<div class="callout red">
+  <strong>⚡ 결정적 모순: 동아엘텍의 자산가치 디스카운트</strong>
+  선익시스템 시총 1조 709억 × 53.08% = 약 5,684억원 (동아엘텍 보유 지분 시장가치)<br>
+  동아엘텍 시총 자체 = 약 1,928억원<br>
+  → <strong>지주사 디스카운트 약 66%.</strong> 동아엘텍을 사면 선익 지분을 66% 할인된 가격에 사면서 본업 검사장비 + VC를 덤으로 받는 구조.
+</div>
+
+<h3>6.2 연결 회계 구조의 이해 — 왜 두 실적이 비슷해 보이는가 <span class="new-badge">NEW</span></h3>
+
+<p>동아엘텍 연결 재무제표와 선익시스템 별도 재무제표를 단순 비교하면 매출·영업이익이 유사하게 보입니다. 이는 실적이 수렴해서가 아니라 <strong>회계 처리 방식 때문에 발생하는 착시</strong>입니다.</p>
+
+<p>동아엘텍이 선익시스템을 53.08% 보유한 종속기업으로 두고 있으므로, K-IFRS 기준 <strong>전액 연결(Full Consolidation)</strong>이 적용됩니다. 50% 초과 시 지배력(Control)을 보유한 것으로 보아 사실상 하나의 경제적 실체로 간주하기 때문입니다.</p>
+
+<pre style="font-size:.82rem">
+동아엘텍 연결 재무제표 =
+  동아엘텍 별도 (검사장비 본업) 100%
+  + 선익시스템                  100% ← 지분율 관계없이 전액 합산
+  + 디에이밸류인베스트먼트 등
+  - 내부거래 제거
+  ─────────────────────────────────
+  하단에서 비지배지분(NCI) 차감
+  선익 순이익 × 46.92% → 비지배주주 몫으로 분리
+</pre>
+
+<p>즉 동아엘텍 연결 매출 안에 이미 선익시스템 전체가 포함되어 있습니다. 동아엘텍 연결 실적 ≈ 선익 실적인 이유는 <strong>동아엘텍 본업(검사장비)의 규모 자체가 선익 대비 작기 때문</strong>입니다.</p>
+
+<div class="callout blue">
+  <strong>올바른 비교 기준</strong>
+  선익시스템 별도 vs 동아엘텍 연결을 비교하는 것은 의미가 없습니다. 동아엘텍 연결 안에 선익이 이미 들어있기 때문입니다. 올바른 관점은 "동아엘텍 연결 = 선익 + α(본업)"이며, 이 α의 가치가 시장에서 음수(-) 취급받고 있다는 것이 핵심입니다.
+  <br><br>
+  선익시스템 지분 시장가치(5,684억) > 동아엘텍 시총(1,928억)<br>
+  → 동아엘텍 본업 + VC의 시장 평가 = <strong>약 -3,756억원 (마이너스)</strong>
+</div>
+
+<h3>6.3 밸류에이션 배수 비교 — PBR·PSR 기준 약 10배 차이</h3>
+
+<table>
+  <thead><tr><th>밸류에이션 지표</th><th>선익시스템</th><th>동아엘텍</th><th>배수 차이</th><th>해석</th></tr></thead>
+  <tbody>
+    <tr><td><strong>PBR</strong></td><td>약 3.6배</td><td><strong>약 0.35배</strong></td><td><strong>약 10배</strong></td><td>동아엘텍은 순자산의 35%에 거래됨 — 해산가치 이하</td></tr>
+    <tr><td><strong>PSR</strong></td><td>약 1.0배</td><td><strong>약 0.1배</strong></td><td><strong>약 10배</strong></td><td>동아엘텍 연결매출의 10%에 불과한 시총</td></tr>
+    <tr><td><strong>ROE</strong></td><td>약 67%</td><td>약 38%</td><td>약 1.8배</td><td>선익 우위이나 동아엘텍도 강하게 개선 중</td></tr>
+    <tr><td><strong>PER</strong></td><td>약 11.4배</td><td><strong>약 4.0배</strong></td><td>약 2.9배</td><td>이익 기준으로도 동아엘텍이 3배 저렴</td></tr>
+  </tbody>
+</table>
+
+<h3>6.4 역사적 맥락 — 밸류 갭은 구조적으로 고착되어 있습니다</h3>
+
+<p>동아엘텍의 PBR은 2017년 이후 단 한 번도 1배를 넘지 않았습니다. 선익시스템은 BOE 수주 기대감으로 PSR이 2021~2024년 4~6.5배까지 팽창했다가, 실적이 실제로 나온 2025년 4분기에 PSR 1배로 수렴했습니다. <strong>기대가 실적을 앞질렀다가 다시 만나는 과정</strong>입니다. 반면 동아엘텍 PSR은 실적 폭발에도 0.1배에서 전혀 움직이지 않았습니다.</p>
+
+<table>
+  <thead><tr><th>시기</th><th>선익시스템 PSR</th><th>동아엘텍 PSR</th><th>맥락</th></tr></thead>
+  <tbody>
+    <tr><td>2017~2020년</td><td>0.7~1.2배</td><td>0.3~0.7배</td><td>두 회사 밸류 격차 크지 않음</td></tr>
+    <tr><td>2021~2022년</td><td><strong>4~5.7배</strong></td><td>0.4~0.5배</td><td>선익에 OLED 성장 기대 프리미엄 폭발</td></tr>
+    <tr><td>2023~2024년</td><td>3~6.5배</td><td>0.2~0.4배</td><td>격차 최대화, 동아엘텍 완전 소외</td></tr>
+    <tr><td>2025년 4Q</td><td><strong>1.0배</strong></td><td><strong>0.1배</strong></td><td>선익 PSR 정상화 (실적이 기대를 따라잡음), 동아엘텍은 여전히 소외</td></tr>
+  </tbody>
+</table>
+
+<h3>6.5 배당 체인 — 디스카운트 해소의 실행 경로 <span class="new-badge">NEW</span></h3>
+
+<p>동아엘텍의 디스카운트를 해소하는 핵심 트리거가 배당 확대라면, 그 배당의 재원이 어디서 오는지를 이해해야 합니다. 연결 회계상 964억 순이익을 기록해도, <strong>실제 현금은 배당을 통해서만 법인 밖으로 나옵니다.</strong></p>
+
+<pre style="font-size:.82rem">
+[배당 체인 전체 구조]
+
+① 선익시스템 (순이익 ~1,020억, 이익잉여금 ~1,000억)
+       ↓ 배당 결의 (동아엘텍이 53%로 이사회 사실상 통제)
+       ├─ 동아엘텍 수취: 배당총액 × 53.08%   ← 실제 현금 유입
+       └─ 소수주주 수취: 배당총액 × 46.92%
+
+② 동아엘텍 (선익 배당 수취 + 본업 이익)
+       ↓ 배당 결의 (박재규 일가 37.74%로 통제)
+       ├─ 박재규:  배당총액 × 14.83%  → 분리과세 혜택
+       ├─ 박진균:  배당총액 × 11.44%  → 분리과세 혜택
+       ├─ 박진철:  배당총액 × 11.44%  → 분리과세 혜택
+       └─ 소액주주: 배당총액 × 62.26% → 소액주주도 수혜
+</pre>
+
+<p><strong>배당 파이프라인의 시작은 선익시스템입니다.</strong> 선익의 배당이 먼저 올라가지 않으면, 동아엘텍의 배당 재원이 본업 현금(약 100~200억)으로만 제한되어 배당성향 25% 달성(241억 필요)이 빠듯해집니다.</p>
+
+<p>선익시스템의 배당 재원은 <strong>이익잉여금 약 1,000억원</strong>으로 충분합니다 (배당가능이익 = 이익잉여금 - 법정준비금 적립 의무액). 돈이 없어서 못 하는 게 아니라, 지금까지 안 해온 것입니다.</p>
+
+<table>
+  <thead><tr><th>선익 배당성향 시나리오</th><th>선익 배당총액</th><th>동아엘텍 현금 수취</th><th>동아엘텍 배당 재원 합계</th><th>동아엘텍 성향 25% 달성 여부</th></tr></thead>
+  <tbody>
+    <tr><td>현재 (≈0%)</td><td>≈ 0억</td><td>≈ 0억</td><td>본업 100~200억</td><td>❌ 빠듯/불가</td></tr>
+    <tr><td>10%</td><td>102억</td><td>54억</td><td>154~254억</td><td>△ 간신히</td></tr>
+    <tr><td><strong>25%</strong></td><td><strong>255억</strong></td><td><strong>135억</strong></td><td><strong>235~335억</strong></td><td><strong>✅ 충분히 가능</strong></td></tr>
+    <tr><td>50%</td><td>510억</td><td>271억</td><td>371~471억</td><td>✅ 여유롭게 달성</td></tr>
+  </tbody>
+</table>
+
+<h3>6.6 배당수익률 비교 — 같은 배당성향, 5배 다른 수익률 <span class="new-badge">NEW</span></h3>
+
+<p>선익과 동아엘텍 모두 배당성향 25%를 달성한다고 가정하면, 투자자 입장에서 배당수익률이 극적으로 달라집니다.</p>
+
+<table>
+  <thead><tr><th>항목</th><th>선익시스템</th><th>동아엘텍</th></tr></thead>
+  <tbody>
+    <tr><td>순이익 기준</td><td>약 1,020억</td><td>약 964억 (지배주주 귀속)</td></tr>
+    <tr><td>배당총액 (성향 25%)</td><td>약 255억</td><td>약 241억</td></tr>
+    <tr><td>시가총액</td><td>약 10,709억</td><td>약 1,928억</td></tr>
+    <tr><td><strong>배당수익률</strong></td><td><strong>약 2.4%</strong></td><td><strong>약 12.5%</strong></td></tr>
+  </tbody>
+</table>
+
+<div class="callout red">
+  <strong>같은 배당성향 25%인데 배당수익률이 5배 이상 차이나는 이유</strong>
+  선익시스템은 이미 시총이 높기 때문에 배당 규모 대비 수익률이 낮습니다. 동아엘텍은 극단적 저평가 상태이기 때문에, 같은 금액의 배당이 훨씬 높은 수익률로 귀결됩니다. 디스카운트가 오히려 배당투자자에게 유리하게 작동하는 역설입니다.
+</div>
+
+<h3>6.7 배당수익률 정상화 시 주가 재평가 여지</h3>
+
+<p>배당수익률 12.5%는 시장에서 지속 불가능한 수준입니다. 한국 코스닥 우량주 평균 배당수익률 1~2%대를 감안하면, 이 수익률이 알려지는 순간 주가 재평가 압력이 발생합니다.</p>
+
+<table>
+  <thead><tr><th>시장 적용 배당수익률 가정</th><th>동아엘텍 적정 시총</th><th>현재 시총 대비 상승 여지</th></tr></thead>
+  <tbody>
+    <tr><td>5% 적용</td><td>241억 ÷ 5% = 4,820억</td><td>약 2.5배</td></tr>
+    <tr><td>3% 적용</td><td>241억 ÷ 3% = 8,033억</td><td>약 4.2배</td></tr>
+    <tr><td>2% 적용 (우량주 수준)</td><td>241억 ÷ 2% = 12,050억</td><td>약 6.3배</td></tr>
+  </tbody>
+</table>
+
+<div class="callout green">
+  <strong>배당 확대 시나리오 하에서 동아엘텍이 압도적으로 유리한 이유</strong>
+  배당 확대라는 하나의 트리거로 동아엘텍 주주는 두 가지를 동시에 얻습니다.<br>
+  (1) <strong>현금 수익</strong>: 배당수익률 약 12.5% (선익시스템의 5배)<br>
+  (2) <strong>자본 이익</strong>: 배당수익률 정상화 과정에서의 주가 재평가 (2.5~6배 상방)<br><br>
+  선익시스템은 배당이 늘어도 이미 적정 밸류에 근접해 주가 재평가 여지가 크지 않습니다. 반면 동아엘텍은 선익 배당 확대 → 동아 배당 확대 → 디스카운트 해소라는 <strong>2단계 레버리지 구조</strong>를 갖고 있습니다.
+</div>
+
+<hr class="divider">
+
+<!-- ======================== 7. 디스카운트 해소 ======================== -->
+<h2>7. 디스카운트 해소 트리거 점검 (2026년 4월 말 기준)</h2>
+
+<h3>✅ 확인된 주주환원 (있는 것)</h3>
+<p>결산배당 1주당 150원(2026년 1월 30일 공시). 배당총액 26억원, 배당성향 약 2.7%. 정부 밸류업 기준(25~40%)에 크게 못 미치며, 현재 주가(11,000원) 기준 실효 배당수익률 약 1.4%에 불과합니다.</p>
+
+<h3>❌ 확인되지 않은 것 (없는 것)</h3>
+<p>자사주 신규 매입·소각 | 인적분할 | 밸류업 프로그램 자율공시 | 중장기 배당정책 발표 — 모두 미확인.</p>
+
+<div class="callout green">
+  <strong>그러나 이 상황이 바뀔 수 있는 구조적 이유가 3가지 생겼습니다</strong>
+  (1) 2026년 3월 박진균 CEO 취임 — 본인 주가 상승에 100% 인센티브<br>
+  (2) 배당소득 분리과세 2026~2028 한시 시행 — 배당 늘릴수록 세금 절감<br>
+  (3) 우량기업부 전환 — 가업상속공제 창 좁아짐, 배당 확대가 대안 부각
+</div>
+
+<hr class="divider">
+
+<!-- ======================== 8. 경영승계 ======================== -->
+<h2>8. 2026년 경영승계 심층 분석 <span class="update-badge">UPDATED</span></h2>
+
+<h3>8.1 18개월 시나리오의 완성</h3>
+<div class="timeline">
+  <div class="timeline-item"><span class="timeline-date">2024.01.11</span>박재규 → 박진균·박진철 각 100만주 증여 (장·차남 동등 분배). 당시 지분율 각 9.38%</div>
+  <div class="timeline-item"><span class="timeline-date">2024.09.23</span>이사회 결의: 자사주 소각 결정</div>
+  <div class="timeline-item"><span class="timeline-date">2024.09.30</span><strong>자사주 1,920,281주 소각.</strong> 발행주식 10,662,938 → 8,742,657주. 박진균·박진철 지분율 9.38% → 11.44%로 현금 없이 자동 상승</div>
+  <div class="timeline-item"><span class="timeline-date">2024.11.06</span><strong>1:1 무상증자 권리락.</strong> 발행주식 8,742,657 → 17,485,314주. 박진균·박진철 각 100만주 → 200만주. 지분율 11.44% 유지. 주가 낮춰 향후 증여세 부담 감소</div>
+  <div class="timeline-item"><span class="timeline-date">2026.03.20</span><strong>박재규 사임 / 박진균 각자대표이사 선임.</strong> 최귀상(전문경영인) + 박진균(오너 2세) 각자대표 체제 완성</div>
+  <div class="timeline-item"><span class="timeline-date">2026.05.04</span>동아엘텍 <strong>우량기업부 전환</strong> (중견기업부 → 우량기업부). 이 발견이 Section 11의 핵심 변수</div>
+</div>
+
+<h3>8.2 자사주 소각 → 무상증자 시퀀스의 진짜 의미</h3>
+<p>표면적으로는 "주주환원(자사주 소각)"처럼 보이지만, 실질은 <strong>정교하게 설계된 승계 준비입니다.</strong></p>
+<ul>
+  <li><strong>자사주를 먼저 소각한 이유</strong>: 자사주가 남은 상태에서 무상증자 시 자기주식 몫에도 신주 배정 → 실질 주주 혜택 희석. 소각 후 무상증자하면 모든 신주가 실제 주주(오너 일가 포함)에게만 귀속.</li>
+  <li><strong>지분율 강화 효과</strong>: 박진균·박진철 각 9.38% → 11.44%로 현금 지출 없이 상승.</li>
+  <li><strong>무상증자로 주가 낮추기</strong>: 박재규 잔여 지분 추가 증여 시 낮은 주가 기준 증여세 절감.</li>
+</ul>
+
+<h3>8.3 확정된 지분 구조 (공시 크로스체크 완료)</h3>
+<table>
+  <thead><tr><th>인물</th><th>관계</th><th>보유 주식</th><th>지분율</th><th>비고</th></tr></thead>
+  <tbody>
+    <tr><td><strong>박재규</strong></td><td>창업자·회장</td><td>약 2,593,322주</td><td>약 14.83%</td><td>잔여지분 처리 미정</td></tr>
+    <tr><td><strong>박진균</strong></td><td>장남·대표이사</td><td>2,000,000주</td><td><strong>11.44%</strong></td><td>공시 확정</td></tr>
+    <tr><td><strong>박진철</strong></td><td>차남</td><td>2,000,000주</td><td><strong>11.44%</strong></td><td>무상증자로 확정 추정</td></tr>
+    <tr><td>박진수</td><td>친인척·CMO</td><td>약 5,566주</td><td>0.03%</td><td></td></tr>
+    <tr><td colspan="3"><strong>오너 일가 합계</strong></td><td><strong>약 37.74%</strong></td><td>강력한 지배구조, 외부 압박 어려움</td></tr>
+  </tbody>
+</table>
+
+<h3>8.4 승계의 특징 — 경영권과 재산권의 분리</h3>
+<ul>
+  <li>박재규는 지분(장남·차남 동등)과 경영권(장남 단독)을 분리하는 패턴을 선택</li>
+  <li>박진균이 CEO이나 박진철이 200만주(11.44%)를 가진 주주 → 박진철은 사실상의 '배당 수령 투자자'</li>
+  <li>경영승계가 재산 승계보다 선행 → 박재규 잔여지분 처리 긴박성이 낮아진 신호. 장기 보유 + 배당 수령 가능성 높음</li>
+</ul>
+
+<hr class="divider">
+
+<!-- ======================== 9. 분리과세 ======================== -->
+<h2>9. 배당소득 분리과세와 주주환원 유인 <span class="new-badge">NEW</span></h2>
+
+<h3>9.1 정책 개요</h3>
+<p>2025년 12월 국회 통과, 2026년 1월 1일 시행, 2028년까지 3년 한시 적용. 고배당 상장법인 주주의 배당소득을 종합소득과 분리해 별도 저율 과세합니다.</p>
+
+<table>
+  <thead><tr><th>고배당 기업 요건 (택 1)</th><th>배당소득 구간</th><th>분리과세 세율</th><th>기존 최고세율</th></tr></thead>
+  <tbody>
+    <tr><td rowspan="4">① 배당성향 40% 이상<br>② 배당성향 25% 이상 + 전년 대비 배당 10% 이상 증가</td><td>2,000만원 이하</td><td>14%</td><td>최대 49.5%</td></tr>
+    <tr><td>2,000만~3억원</td><td>20%</td><td>최대 49.5%</td></tr>
+    <tr><td>3억~50억원</td><td>25%</td><td>최대 49.5%</td></tr>
+    <tr><td>50억원 초과</td><td>30%</td><td>최대 49.5%</td></tr>
+  </tbody>
+</table>
+
+<h3>9.2 동아엘텍이 요건을 충족하려면</h3>
+<pre>
+2025년 당기순이익: 964억원
+노력형 요건 (배당성향 25% 이상):
+  964억 × 25% = 241억원 배당 필요
+  현재 배당 총액:   26억원
+  → 현재의 약 9.3배 확대 필요 (1주당 약 1,379원)
+  재정적 가능성:   영업이익 1,134억, 순이익 964억 → 충분히 가능
+</pre>
+
+<h3>9.3 박진균 개인 세금 절감 시뮬레이션</h3>
+<p>배당을 1주당 1,380원(배당성향 약 25%)으로 높인다고 가정하면:</p>
+<pre>
+박진균 수령: 2,000,000주 × 1,380원 = 27.6억원
+
+기존 종합과세 (고소득 경영자):   약 11억원 세금
+분리과세 적용 시:                약 1.2억원 세금
+───────────────────────────────
+절감 효과:                     약 9.8억원/년
+</pre>
+
+<h3>9.4 오너 일가 전체 이해관계 완전 정렬</h3>
+<table>
+  <thead><tr><th>인물</th><th>보유 주식</th><th>연간 배당 수령 (1,380원 기준)</th><th>비고</th></tr></thead>
+  <tbody>
+    <tr><td>박재규</td><td>2,593,322주</td><td>약 35.8억원</td><td>장기 보유 시 배당이 주 소득원</td></tr>
+    <tr><td>박진균</td><td>2,000,000주</td><td>약 27.6억원</td><td>분리과세로 약 9.8억 절감</td></tr>
+    <tr><td>박진철</td><td>2,000,000주</td><td>약 27.6억원</td><td>동등 수혜</td></tr>
+    <tr><td colspan="2"><strong>오너 일가 합계</strong></td><td><strong>약 91억원/년</strong></td><td>배당 확대 시 전원 이해관계 일치</td></tr>
+  </tbody>
+</table>
+
+<div class="callout green">
+  <strong>3년 한시 적용이 만드는 긴박성</strong>
+  2026년 사업연도 결산 배당(2027년 주주총회 결의)부터 요건 충족 시 분리과세 적용 가능. 박진균이 2026년에 배당 정책을 전환해야 2028년 만료 전에 최대 3번의 혜택을 받을 수 있습니다.
+</div>
+
+<hr class="divider">
+
+<!-- ======================== 10. 지분 이전 세금 ======================== -->
+<h2>10. 지분 이전 방법별 세금 비교 <span class="new-badge">NEW</span></h2>
+
+<p>박재규 잔여 지분 약 2,593,322주 × 주가 11,000원 = 약 285억원 기준 추정치입니다 (실제 취득가액, 공제 적용 여부에 따라 달라질 수 있음).</p>
+
+<div class="tax-compare">
+  <div class="tax-card worst">
+    <div class="method">방법 A. 증여</div>
+    <div class="amount">~138억원</div>
+    <div style="font-size:.85rem;margin:.3rem 0">납세자: 박진균 (수증자)</div>
+    <div class="note">10년 내 누적 합산. 직계존비속 최고 50% 적용. 즉시 실행 가능하나 세금 가장 큼.</div>
+  </div>
+  <div class="tax-card mid">
+    <div class="method">방법 B. 시장 매수</div>
+    <div class="amount">~74.6억원</div>
+    <div style="font-size:.85rem;margin:.3rem 0">납세자: 박재규 (양도세)</div>
+    <div class="note">대주주 양도세율 27.5%. 박진균이 285억원 현금 필요 → 배당 절세 자금 + 차입 복합 방식 필요. 수년 소요.</div>
+  </div>
+  <div class="tax-card best">
+    <div class="method">방법 C. 상속 + 가업상속공제</div>
+    <div class="amount">≈ 0원</div>
+    <div style="font-size:.85rem;margin:.3rem 0">납세자: 상속인 (거의 없음)</div>
+    <div class="note">가업상속공제 한도 최대 500억 > 잔여 지분 285억. 단, 요건 충족 기간 내 상속 발생해야 함. 10년 사후 의무.</div>
+  </div>
+</div>
+
+<div class="callout">
+  <strong>배당 절세만으로 285억 자금 마련 기간: 약 13~14년</strong>
+  박진균 연간 배당 실수령 약 21억원 ÷ 285억원 = 약 13.6년. 현실적으로 배당 + 대출 복합 방식 필요. 방법 B보다 방법 C(상속)가 세금 면에서 압도적으로 유리하나, 생전에 실행 불가능하다는 한계가 있음.
+</div>
+
+<hr class="divider">
+
+<!-- ======================== 11. 우량기업부 ======================== -->
+<h2>11. 우량기업부 전환 — 가업상속공제 시한 <span class="new-badge">NEW</span></h2>
+
+<h3>11.1 공시 내용 (2026년 5월 4일)</h3>
+<table>
+  <thead><tr><th>항목</th><th>내용</th></tr></thead>
+  <tbody>
+    <tr><td>변경 전</td><td>중견기업부</td></tr>
+    <tr><td>변경 후</td><td><strong>우량기업부</strong></td></tr>
+    <tr><td>변경 사유</td><td>우량 정기요건 충족</td></tr>
+    <tr><td>변경일</td><td>2026년 5월 4일</td></tr>
+  </tbody>
+</table>
+
+<p>우량기업부는 KOSDAQ 내 최고 등급 구분으로, 거래소가 기업의 규모·수익성·재무 안정성을 공식 인정한 것입니다. 투자자 신뢰도와 기관 편입 가능성이 높아지는 긍정적 신호이지만, 동시에 결정적 변수를 만들어냅니다.</p>
+
+<h3>11.2 가업상속공제 매출 임계치 계산</h3>
+<p>가업상속공제 핵심 요건: <strong>직전 3년 평균 매출 5,000억원 미만 (중견기업)</strong></p>
+
+<pre>
+현재 (2025년 기준):
+  2023년: 1,651억
+  2024년: 1,784억
+  2025년: 5,824억
+  3년 평균: 3,086억 → ✅ 5,000억 미만 (가업상속공제 가능)
+
+향후 시나리오 (2026년 매출 4,000억 가정):
+  2024~2026년 평균: (1,784 + 5,824 + 4,000) / 3 = 3,869억 → 여전히 OK
+
+위험 시나리오 (2026~2027년 매출 5,000억대 지속):
+  2025~2027년 평균: (5,824 + 4,000 + 5,000) / 3 = 4,941억 → 임계치 근접!
+  → 가업상속공제 창 마감 임박
+</pre>
+
+<div class="callout red">
+  <strong>우량기업부 전환은 "가업상속공제 창이 빠르게 닫히고 있다"는 신호</strong>
+  선익시스템이 BOE Phase 2, Visionox V5 수주 등을 통해 실적을 지속한다면, 동아엘텍 연결 매출이 향후 2~3년 내 3년 평균 5,000억원을 넘을 가능성이 있습니다. 그 시점부터는 상속을 통한 무세(無稅) 지분 이전이 불가능해집니다.
+</div>
+
+<h3>11.3 이것이 박진균의 배당 유인을 더 강화하는 이유</h3>
+<ul>
+  <li>상속(방법 C)의 창이 좁아질수록 박재규가 지분을 보유한 채 <strong>배당으로 부를 창출하는 시간이 길어지는 것이 최적 전략</strong></li>
+  <li>배당을 높여야 박재규 → 오너 일가 전체의 현금 흐름이 유지됨</li>
+  <li>배당 확대 + 분리과세 적용 = 세금 효율적 현금 창출. 경영승계 + 재산승계 + 분리과세의 3대 요소가 모두 배당 확대를 가리킴</li>
+</ul>
+
+<hr class="divider">
+
+<!-- ======================== 12. 종합 판단 ======================== -->
+<h2>12. 종합 판단 &amp; 모니터링 포인트</h2>
+
+<h3>종목별 투자 관점 요약</h3>
+<table>
+  <thead><tr><th>관점</th><th>선익시스템</th><th>동아엘텍</th></tr></thead>
+  <tbody>
+    <tr><td>모멘텀 직접 노출</td><td>✅ 우월 (수주 공시에 즉각 반응)</td><td>△ 간접 (선익 통해)</td></tr>
+    <tr><td>자산가치</td><td>△</td><td>✅ 우월 (66% 디스카운트)</td></tr>
+    <tr><td>다운사이드 보호</td><td>△ (PER 11.4배)</td><td>✅ (PER 4.0배)</td></tr>
+    <tr><td>배당 확대 기대</td><td>△</td><td>✅ 강력한 유인 3중 구조</td></tr>
+    <tr><td>디스카운트 해소 촉매</td><td>—</td><td>⏰ 취임 후 6~12개월이 관건</td></tr>
+    <tr><td>유동성·시장 주목도</td><td>✅ 우월 (시총 1조)</td><td>△ (시총 2천억)</td></tr>
+  </tbody>
+</table>
+
+<h3>핵심 모니터링 포인트</h3>
+<div class="monitor-grid">
+  <div class="monitor-card">
+    <span class="priority a">A급</span>
+    <div><strong>선익시스템 결산배당 공시</strong> — 배당 체인의 출발점. 선익 배당이 0이면 동아엘텍 배당 확대는 본업 현금만으로 버텨야 해 시간이 오래 걸림</div>
+  </div>
+  <div class="monitor-card">
+    <span class="priority a">A급</span>
+    <div>박진균 IR/주주서한 (2026년 5~7월) — 주주환원 정책 메시지</div>
+  </div>
+  <div class="monitor-card">
+    <span class="priority a">A급</span>
+    <div>2026년 8월 반기 실적 — 반기배당 도입 여부</div>
+  </div>
+  <div class="monitor-card">
+    <span class="priority a">A급</span>
+    <div>박진균 본인 시장 매수 공시 — 가장 신뢰할 수 있는 긍정 신호</div>
+  </div>
+  <div class="monitor-card">
+    <span class="priority a">A급</span>
+    <div>BOE B16 Phase 2 발주 시점 (2026년 하반기 예상)</div>
+  </div>
+  <div class="monitor-card">
+    <span class="priority a">A급</span>
+    <div>Visionox V5 FMM 증착기 발주 결과</div>
+  </div>
+  <div class="monitor-card">
+    <span class="priority b">B급</span>
+    <div>동아엘텍 연간 매출 3년 평균 추이 — 가업상속공제 창 마감 시점 계산</div>
+  </div>
+  <div class="monitor-card">
+    <span class="priority b">B급</span>
+    <div>LG디스플레이 8.6G 신규 투자 결정</div>
+  </div>
+  <div class="monitor-card">
+    <span class="priority b">B급</span>
+    <div>애플 폴더블 아이폰·맥북 프로 OLED 판매 실적 (2026 4Q~)</div>
+  </div>
+  <div class="monitor-card">
+    <span class="priority c">C급</span>
+    <div>박재규 잔여 지분 추가 증여 공시 — 디스카운트 유지 의도 신호</div>
+  </div>
+</div>
+
+<hr class="divider">
+
+<!-- ======================== 13. 리스크 ======================== -->
+<h2>13. 리스크 요인</h2>
+<ol>
+  <li><strong>BOE LTPO 수율 리스크</strong>: 8.6G 초기 수율 50% 미달 가능성, 정상화 2~3년. Phase 2 투자 지연 가능성.</li>
+  <li><strong>단일 고객 집중</strong>: 8.6G IT OLED는 사실상 애플·삼성전자만 채용. 애플 부진 시 Phase 2 확대 제한.</li>
+  <li><strong>폴더블 가격 저항</strong>: 갤럭시 Z 폴드 200만원+, 폴더블 아이폰 250만원+. 신규 수요 유입 속도 제한.</li>
+  <li><strong>AR 글래스 기술 분화</strong>: OLEDoS vs LCoS vs LEDoS 경쟁. OLEDoS 비주류화 시 선익시스템 OLEDoS 모멘텀 둔화.</li>
+  <li><strong>중국 비FMM 기술 성공</strong>: CSOT 잉크젯, Visionox ViP 상용화 시 FMM 증착기 의존도 감소.</li>
+  <li><strong>박재규 추가 증여 목적 디스카운트 유지</strong>: 잔여 14.83% 이전 시 주가 하방 관리 유인 잔존 가능성.</li>
+  <li><strong>가업상속공제 세법 개정 리스크</strong>: 요건 강화 또는 한도 축소 시 최적 상속 시나리오 변경.</li>
+  <li><strong>박진철 오버행</strong>: 박진철(차남, 비경영)이 향후 200만주 시장 매도 시 단기 주가 압력.</li>
+</ol>
+
+<div class="disclaimer">
+  <strong>⚠️ 유의사항</strong><br>
+  본 리포트는 공개된 DART 공시, 시장조사기관(카운터포인트·유비리서치·옴디아) 자료, 언론 보도를 종합·분석한 참고 자료로, 투자 권유가 아닙니다. 세금 계산은 공개 정보 기반 추정치이며 실제 취득가액·공제 적용 여부에 따라 크게 달라질 수 있습니다. 정확한 세무 판단은 반드시 전문 세무사의 개별 검토를 받으시기 바랍니다. 시가총액·PER 등 밸류에이션 지표는 작성일(2026년 5월 1일) 기준이며 매일 변동합니다. 투자 결정에 따른 모든 책임은 투자자 본인에게 있습니다.
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const isDark = false;
+const subC = '#6b7280';
+const gridC = 'rgba(0,0,0,0.07)';
+
+const totalsPlugin = {
+  id:'totals',
+  afterDatasetsDraw(chart){
+    const {ctx} = chart;
+    const last = chart.getDatasetMeta(chart.data.datasets.length-1);
+    chart.data.labels.forEach((l,i)=>{
+      let t=0; chart.data.datasets.forEach(d=>t+=d.data[i]||0);
+      const bar=last.data[i]; if(!bar) return;
+      ctx.save(); ctx.fillStyle='#374151'; ctx.font='600 12px -apple-system,sans-serif';
+      ctx.textAlign='center'; ctx.fillText(t.toFixed(1)+'조', bar.x, bar.y-8); ctx.restore();
+    });
+  }
+};
+
+new Chart(document.getElementById('capexChart'),{
+  type:'bar',
+  data:{
+    labels:['2023','2024','2025','2026E','2027E'],
+    datasets:[
+      {label:'삼성디스플레이',data:[1.0,1.5,1.8,1.0,1.5],backgroundColor:'#185FA5'},
+      {label:'LG디스플레이', data:[2.0,1.5,1.5,2.0,2.5],backgroundColor:'#0F6E56'},
+      {label:'BOE',          data:[0.5,2.5,4.0,4.5,3.0],backgroundColor:'#D85A30'},
+      {label:'Visionox',     data:[0.3,0.5,2.0,4.5,3.0],backgroundColor:'#BA7517'},
+      {label:'CSOT',         data:[0.3,0.5,1.0,2.0,2.5],backgroundColor:'#D4537E'},
+      {label:'Tianma',       data:[0.5,0.5,0.5,0.7,1.0],backgroundColor:'#7F77DD'}
+    ]
+  },
+  options:{
+    responsive:true, maintainAspectRatio:false,
+    plugins:{
+      legend:{display:false},
+      tooltip:{callbacks:{
+        label:c=>c.dataset.label+': '+c.parsed.y.toFixed(1)+'조원',
+        footer:items=>'합계: '+(items.reduce((s,i)=>s+i.parsed.y,0)).toFixed(1)+'조원'
+      }}
+    },
+    scales:{
+      x:{stacked:true,ticks:{autoSkip:false,color:subC},grid:{display:false}},
+      y:{stacked:true,
+        title:{display:true,text:'연간 OLED 설비투자 (조원)',color:subC,font:{size:12}},
+        ticks:{callback:v=>v+'조',color:subC},
+        max:17, grid:{color:gridC}
+      }
+    }
+  },
+  plugins:[totalsPlugin]
+});
+
+new Chart(document.getElementById('projChart'),{
+  type:'bar',
+  data:{
+    labels:['BOE B16 (청두)','Visionox V5 (허페이)','CSOT T8 (광저우)','삼성D A6 (아산)','Tianma 8.6G','LGD 8.6G'],
+    datasets:[{
+      label:'누적 약정 capex',
+      data:[11.4,10.8,5.6,4.1,0,0],
+      backgroundColor:['#D85A30','#BA7517','#D4537E','#185FA5','#D1D5DB','#D1D5DB'],
+      borderRadius:4
+    }]
+  },
+  options:{
+    indexAxis:'y', responsive:true, maintainAspectRatio:false,
+    plugins:{
+      legend:{display:false},
+      tooltip:{callbacks:{label:c=>{
+        if(c.parsed.x===0) return ['Tianma: 검토 중','LGD: 보류 (6세대 활용)'][c.dataIndex-4]||'미정';
+        return c.parsed.x.toFixed(1)+'조원';
+      }}}
+    },
+    scales:{
+      x:{title:{display:true,text:'누적 약정 (조원)',color:subC,font:{size:12}},
+         ticks:{callback:v=>v+'조',color:subC}, max:13, grid:{color:gridC}},
+      y:{ticks:{color:'#374151'},grid:{display:false}}
+    }
+  },
+  plugins:[{
+    id:'projLabels',
+    afterDatasetsDraw(chart){
+      const {ctx}=chart; const meta=chart.getDatasetMeta(0);
+      const vals=[11.4,10.8,5.6,4.1,'검토 중','보류'];
+      meta.data.forEach((bar,i)=>{
+        ctx.save(); ctx.fillStyle='#374151'; ctx.font='600 12px -apple-system,sans-serif';
+        ctx.textAlign='left'; ctx.textBaseline='middle';
+        const txt=typeof vals[i]==='number'?vals[i].toFixed(1)+'조':vals[i];
+        ctx.fillText(txt, bar.base+(typeof vals[i]==='number'?Math.max(bar.width,20)+6:6), bar.y);
+        ctx.restore();
+      });
+    }
+  }]
+});
+</script>
+</body>
+</html>
